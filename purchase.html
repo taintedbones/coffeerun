@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase Screen</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
+    <link rel="stylesheet" href="stylesheets/styles.css" />
+  </head>
+
+  <body class="container">
+    <header>
+      <h1>Purchase Screen</h1>
+    </header>
+    <form data-purchase-info="form">
+      <section>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h2>Contact information</h2>
+            <fieldset>
+              <legend>Title</legend>
+              <div class="radio">
+                <label for="title-1">
+                  <input type="radio" name="title" id="title-1" value="Count" />
+                  Count
+                </label>
+              </div>
+              <div class="radio">
+                <label for="title-2">
+                  <input
+                    type="radio"
+                    name="title"
+                    id="title-2"
+                    value="Countess"
+                    checked
+                  />
+                  Countess
+                </label>
+              </div>
+              <div class="radio">
+                <label for="title-3">
+                  <input
+                    type="radio"
+                    name="title"
+                    id="title-3"
+                    value="Spook Lord"
+                  />
+                  Spook Lord
+                </label>
+              </div>
+            </fieldset>
+            <div class="form-group">
+              <label for="name">
+                <span>Name: </span>
+                <strong><abbr title="required">*</abbr></strong>
+              </label>
+              <input
+                class="form-control"
+                type="text"
+                name="username"
+                id="name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="mail">
+                <span>E-mail: </span>
+                <strong><abbr title="required">*</abbr></strong>
+              </label>
+              <input
+                class="form-control"
+                type="email"
+                name="usermail"
+                id="mail"
+              />
+            </div>
+            <div class="form-group">
+              <label for="pwd">
+                <span>Password: </span>
+                <strong><abbr title="requried">*</abbr></strong>
+              </label>
+              <input
+                class="form-control"
+                type="password"
+                name="password"
+                id="pwd"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h4>Payment Information</h4>
+        <p>
+          <label for="card">
+            <span>Card Type:</span>
+          </label>
+          <select class="form-control" name="usercard" id="card">
+            <option value="visa">Visa</option>
+            <option value="mc">Mastercard</option>
+            <option value="amex">American Express</option>
+          </select>
+        </p>
+        <p>
+          <label for="number">
+            <span>Card number: </span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input
+            class="form-control"
+            type="tel"
+            name="cardnumber"
+            id="number"
+          />
+        </p>
+        <p>
+          <label for="date">
+            <span>Expiration Date:</span>
+            <strong><abbr title="required">*</abbr></strong>
+            <em>Formatted as mm/dd/yyy</em>
+          </label>
+          <input class="form-control" type="date" name="expiration" id="date" />
+        </p>
+      </section>
+      <section>
+        <button type="submit">Validate the payment</button>
+      </section>
+    </form>
+
+    <div id="confirm-modal">
+      Peek-A-Boo! I can see you. And I know what you do. So put your hands on
+      your face. And cover up your eyes. HA HA HA HA HA HA.
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="scripts/formhandler.js" charset="utf-8"></script>
+    <script src="scripts/purchase.js" charset="utf-8"></script>
+  </body>
+</html>
